@@ -9,6 +9,12 @@ venv/
 # Logs
 *.log
 
+#data
+data/*
+!data/raw/
+!data/processed/
+!data/**/.gitkeep
+
 # IDE
 .vscode/
 .idea/
