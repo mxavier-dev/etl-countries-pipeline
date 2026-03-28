@@ -12,6 +12,8 @@ venv/
 #data
 data/*
 !data/.gitkeep
+!data/raw
+!data/processed
 
 # IDE
 .vscode/
