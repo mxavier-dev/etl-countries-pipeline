@@ -4,13 +4,13 @@ from datetime import datetime
 
 def save_raw(data):
     time = datetime.now().strftime('%d-%m-%Y_%H:%M:%S')
-    filename = f'Downloads/etl_countries_project/data/raw/raw_{time}.json'
+    filename = f'etl-countries-pipeline/data/raw/raw_{time}.json'
     with open(filename, 'w', encoding='utf-8') as arq:
         json.dump(data, arq, indent=4)
 
 def save_processed(data):
     time = datetime.now().strftime('%d-%m-%Y_%H:%M:%S')
-    filename = f'Downloads/etl_countries_project/data/processed/processed_{time}.json'
+    filename = f'etl-countries-pipeline/data/processed/processed_{time}.json'
     data.to_json(filename, orient='records', indent=4, force_ascii=False)
 
 def insert_countries(data):
