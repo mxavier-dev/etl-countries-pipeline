@@ -93,11 +93,6 @@ python -m src.pipeline
 - API endpoint is currently defined directly in the code (no environment configuration)
 - Data files are not versioned (data/ is ignored via .gitignore)
 - This project is focused on learning and simulating real ETL workflows
-## 📈 Roadmap
-- Externalize configuration using environment variables
-- Implement upsert logic
-- Add automated tests
-- Orchestrate with Airflow
 
 ## 📫 Contact
 
