@@ -46,4 +46,4 @@ def insert_countries(data):
     cursor.close()
     conn.close()
 
-    print(f"{len(values)} registros inseridos")
+    print(f"{len(values)} records inserted")
