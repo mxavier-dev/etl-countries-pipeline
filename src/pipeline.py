@@ -5,28 +5,28 @@ from utils.logger import get_logger
 
 logger = get_logger()
 
-logger.info('--- Iniciando Pipeline ---')
-def main():
+logger.info('--- Starting Pipeline ---')
+def pipeline():
     try:
-        logger.info('Iniciando extração')
+        logger.info('Starting extraction')
         data = extract_data()
 
-        logger.info('Salvando dados brutos')
+        logger.info('Saving raw data')
         save_raw(data)
 
-        logger.info('Transformando dados')
+        logger.info('Transforming data')
         df = transform_data(data)
 
-        logger.info('Salvando dados transformados')
+        logger.info('Saving transformed data')
         save_processed(df)
         
-        logger.info('Carregando dados ao banco')
+        logger.info('Loading data to the database')
         insert_countries(df)
 
-        logger.info('Pipeline finalizado com sucesso')
+        logger.info('Pipeline completed successfully')
     except Exception as e:
-        logger.error(f'Erro no pipeline: {e}')
+        logger.error(f'Pipeline error: {e}')
         raise
 
 if __name__ == '__main__':
-    main()
+    pipeline()
